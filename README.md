@@ -22,10 +22,14 @@ This project demonstrates practical cloud engineering skills through the impleme
 |---|---|
 | Organisation | HurkSystems |
 | Cloud provider | Microsoft Azure |
-| Subscription | sub-hurksystems-sandbox |
+| Subscription | `sub-hurksystems-sandbox-001` |
 | Subscription type | Pay-As-You-Go |
 | Environment | Sandbox |
 | Identity provider | Microsoft Entra ID |
+| Tenant name | HurkSystems |
+| Tenant licence | Microsoft Entra ID Free |
+| Monthly budget | A$1.00 AUD |
+| Budget scope | Billing profile |
 
 ## Project Progress
 
@@ -46,7 +50,7 @@ This project demonstrates practical cloud engineering skills through the impleme
 | Phase | Documentation | Status |
 |---|---|---|
 | 01 | [Subscription and Cost Management](docs/01-subscription-and-cost-management.md) | Completed |
-| 02 | Tenant Configuration | Planned |
+| 02 | Tenant Configuration | In Progress |
 | 03 | Identity and Access Management | Planned |
 | 04 | Azure Governance | Planned |
 | 05 | Resource Organisation | Planned |
@@ -54,6 +58,13 @@ This project demonstrates practical cloud engineering skills through the impleme
 | 07 | Compute and Storage | Planned |
 | 08 | Monitoring and Security | Planned |
 | 09 | Infrastructure as Code | Planned |
+| 10 | CI/CD and Automation | Planned |
+
+## Cost Management
+
+A monthly budget of A$1.00 AUD has been configured at the billing profile scope to monitor expenditure and provide email notifications at defined thresholds.
+
+Azure budgets provide notifications rather than hard spending limits. Additional governance controls will be introduced to help reduce the risk of unexpected charges.
 
 ## Technologies
 

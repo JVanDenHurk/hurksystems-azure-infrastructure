@@ -2,34 +2,51 @@
 
 ## Overview
 
-The initial phase of the HurkSystems Azure infrastructure project establishes the Azure subscription and implements cost management controls before deploying cloud resources.
+The initial phase of the HurkSystems Azure infrastructure project focuses on establishing an Azure subscription and implementing cost management controls before deploying cloud resources.
+
+HurkSystems is a fictional organisation used to simulate an enterprise Microsoft Azure environment.
 
 ## Objective
 
-Establish a dedicated sandbox subscription and configure financial monitoring to minimise the risk of unexpected Azure charges.
+Establish a dedicated sandbox subscription and implement cost monitoring to minimise the risk of unexpected Azure charges.
 
 ## Subscription Configuration
 
 | Setting | Configuration |
 |---|---|
-| Subscription name | sub-hurksystems-sandbox |
+| Subscription name | `sub-hurksystems-sandbox-001` |
 | Subscription type | Pay-As-You-Go |
 | Environment | Sandbox |
+| Microsoft Entra tenant | HurkSystems |
 | Billing agreement | Microsoft Customer Agreement |
+| Subscription status | Active |
+
+### Subscription Overview
+
+![HurkSystems Azure Subscription](../screenshots/cost-management/subscription-overview.png)
 
 ## Naming Convention
 
 The following naming convention has been adopted for Azure subscriptions:
 
-`sub-<organisation>-<environment>`
+`sub-<organisation>-<environment>-<instance>`
 
-This provides consistent resource identification and distinguishes subscriptions according to their purpose.
+| Component | Description | Example |
+|---|---|---|
+| sub | Subscription identifier | sub |
+| Organisation | Organisation name | hurksystems |
+| Environment | Deployment environment | sandbox |
+| Instance | Unique instance number | 001 |
+
+This convention provides consistent identification and allows additional subscriptions to be introduced without naming conflicts.
 
 ## Budget Configuration
 
+A monthly budget was configured to monitor Azure spending and provide notifications when defined thresholds are reached.
+
 | Setting | Configuration |
 |---|---|
-| Budget name | budget-hurksystems-sandbox |
+| Budget name | `budget-hurksystems-sandbox` |
 | Scope | Billing profile |
 | Budget amount | $1.00 |
 | Reset period | Monthly |
@@ -37,37 +54,33 @@ This provides consistent resource identification and distinguishes subscriptions
 | Alert thresholds | 1%, 50%, 80%, 100% |
 | Notification method | Email |
 
+### Budget Configuration Evidence
+
+![Azure Budget Configuration](../screenshots/cost-management/budget-configuration.png)
+
 ## Design Decisions
 
-A Pay-As-You-Go subscription was selected to provide access to Azure services without committing to a fixed monthly expenditure.
+### Pay-As-You-Go Subscription
+
+A Pay-As-You-Go subscription was selected to provide access to Azure services without requiring a fixed monthly commitment.
+
+This model supports practical experimentation while allowing resources to be deployed and removed as required.
+
+### Subscription Naming Convention
+
+A structured naming convention was implemented to maintain consistency across the Azure environment.
+
+The instance identifier `001` allows for future expansion if additional subscriptions are required.
+
+### Cost Management
 
 A low monthly budget was established to provide early notification of unexpected resource consumption.
 
-The budget was configured at the billing profile scope to align with the local billing currency.
-
-Instance numbers were omitted from subscription and budget names because multiple instances are not currently required.
+The budget was configured at the billing profile scope to align cost monitoring with the organisation's billing structure.
 
 ## Validation
 
-- Azure subscription created successfully.
-- Subscription naming convention established.
-- Monthly budget configured.
-- Cost alert thresholds configured.
-- Email notification recipient configured.
-- Evaluated spend confirmed at $0.00.
-- Billing profile budget currency pending final verification.
+The following checks were performed:
 
-## Cost Considerations
-
-Azure budgets provide expenditure notifications but do not enforce a hard spending limit.
-
-Budget notifications may be delayed due to Azure cost processing. Additional preventative controls will be implemented using Azure Policy.
-
-## Outcome
-
-The initial Azure subscription and cost monitoring foundation has been established. The environment is ready for tenant configuration and identity management.
-
-## References
-
-- [Azure resource naming conventions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming)
-- [Create and manage Azure budgets](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets)
+- [x] Azure Pay-As-You-Go subscription created.
+- [x] Subscription renamed

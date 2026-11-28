@@ -28,7 +28,7 @@ accounts were updated to use the new domain.
 The original Microsoft-managed domain remains associated
 with the tenant.
 
-![Tenant Overview](../screenshots/identity/tenant-overview.png)
+![Tenant Overview](../screenshots/02-tenant-configuration/tenant-overview.png)
 
 ## Security Configuration
 
@@ -41,7 +41,7 @@ This provides baseline identity security controls,
 including multifactor authentication requirements
 and protection against legacy authentication.
 
-![Security Defaults](../screenshots/identity/security-defaults.png)
+![Security Defaults](../screenshots/02-tenant-configuration/security-defaults.png)
 
 ### Multifactor Authentication
 
@@ -52,7 +52,7 @@ account.
 This provides an additional layer of identity
 protection beyond password-based authentication.
 
-![Administrator MFA](../screenshots/identity/admin-mfa-methods.png)
+![Administrator MFA](../screenshots/02-tenant-configuration/admin-mfa-methods.png)
 
 ### Azure Resource Access Elevation
 
@@ -85,7 +85,7 @@ This configuration follows the principle of least
 privilege by limiting administrative permissions
 to operational requirements.
 
-![Administrator Roles](../screenshots/identity/administrator-roles.png)
+![Administrator Roles](../screenshots/02-tenant-configuration/administrator-roles.png)
 
 ### Emergency Administrator
 

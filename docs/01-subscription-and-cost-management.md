@@ -23,7 +23,7 @@ Establish a dedicated sandbox subscription and implement cost monitoring to mini
 
 ### Subscription Overview
 
-![HurkSystems Azure Subscription](../screenshots/cost-management/subscription-overview.png)
+![HurkSystems Azure Subscription](../screenshots/01-subscription-and-cost-management/subscription-overview.png)
 
 ## Naming Convention
 
@@ -56,7 +56,7 @@ A monthly budget was configured to monitor Azure spending and provide notificati
 
 ### Budget Configuration Evidence
 
-![Azure Budget Configuration](../screenshots/cost-management/budget-configuration.png)
+![Azure Budget Configuration](../screenshots/01-subscription-and-cost-management/budget-configuration.png)
 
 ## Design Decisions
 
